@@ -32,5 +32,5 @@ ironJS.run(app=path_to_index.html, port=1111, endpoint='')
 * instead, for seamless user experience:
     1. user interaction with app can be recorded in javascript (i.e. with Vue)
     2. before app close, store interaction results on local filesytem with javascript (i.e. with fs)
-    3. on app close, any code after pyjs.run() will continue to run...
+    3. on app close, any code after ironJS.run() will run...
     4. load results in python (i.e. with json.loads()) and process
