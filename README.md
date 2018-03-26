@@ -3,10 +3,10 @@
 
 ## Usage
 * a pyRevit module for rendering a Javascript Application
-* uses cefpython3 (chromium library) and a Python35 subprocess (doesn't support iron python)
+* uses cefpython3 (chromium library) and thus a Python35 subprocess (cefpython3 doesn't support iron python)
 * Python35 must have the cefpython3 library installed in site-packages!
 
-* clone (the base app)[https://github.com/grantdfoster/javascript-app-template] to begin your Javascript project!
+* clone [the base app](https://github.com/grantdfoster/javascript-app-template) to begin your Javascript project!
 * after building your app, copy the following files to your pyRevit tool
 ```
 dist
