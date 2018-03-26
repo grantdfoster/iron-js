@@ -1,11 +1,16 @@
 # ironJS
 *an iron python module to serve Javascript Applications in pyRevit*
 
-## Usage
-* a pyRevit module for rendering a Javascript Application
+## How?
 * uses cefpython3 (chromium library) and thus a Python35 subprocess (cefpython3 doesn't support iron python)
-* Python35 must have the cefpython3 library installed in site-packages!
 
+## Initial Setup
+*if you are developing on pyWeWork or pyWeWork-Dev, this has been setup already!*
+* place ironJS and a copy of Python35 in a lib folder so pyRevit sees the libraries
+* make sure **python_path** is set correctly (pointing to Python35) in **__init__.py**
+* your copy of Python35 must have the cefpython3 library in site-packages!
+
+## Developing an App
 * clone [the base app](https://github.com/grantdfoster/javascript-app-template) to begin your Javascript project!
 * after building your app, copy the following files to your pyRevit tool
 ```
@@ -15,9 +20,11 @@ dist
 index.html
 ```
 
+## Run an App
+*in your pyRevit tool script...*
 ``` python
-import pyjs
-pyjs.run(app=path_to_index.html, port=1111)
+import ironJS
+ironJS.run(app=path_to_index.html, port=1111)
 ```
 
 ## Note:
