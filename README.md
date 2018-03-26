@@ -24,7 +24,7 @@ index.html
 *in your pyRevit tool script...*
 ``` python
 import ironJS
-ironJS.run(app=path_to_index.html, port=1111)
+ironJS.run(app=path_to_index.html, port=1111, endpoint='')
 ```
 
 ## Note:
