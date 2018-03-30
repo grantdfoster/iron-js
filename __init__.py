@@ -12,10 +12,6 @@ def subprocess_wrapper(command):
 
 
 def run(app=None, port=None, endpoint=''):
-    # check that an application path was provided
-    if not app or not port:
-        return 'Please provide a path to the application and a 4-digit port value'
-        
     # start local server
     local_server = subprocess.Popen(['python', '-m', 'http.server', str(port)], shell=True, cwd=app)
 
