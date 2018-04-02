@@ -24,13 +24,15 @@ index.html
 *in your pyRevit tool script...*
 ``` python
 import ironJS
-ironJS.run(app=path_to_index.html, port=1111, endpoint='')
+process, out, error = ironJS.run(app=path_to_index.html, port=1111, endpoint='')
 ```
 
-## Note:
-* because this library uses a python subprocess, the standard cefpython3 javascript <> python bindings cannot be used
-* instead, for seamless user experience:
-    1. user interaction with app can be recorded in javascript (i.e. with Vue)
-    2. before app close, store interaction results on local filesytem with javascript (i.e. with fs)
-    3. on app close, any code after ironJS.run() will run...
-    4. load results in python (i.e. with json.loads()) and process
+## Send Data from JS Application to pyRevit script:
+*in Javascript:*
+``` javascript
+window.sendToPython(some_json_string)
+```
+*in Python:*
+``` python
+# data comes in via the 'out' return variable from ironJS.run()
+```

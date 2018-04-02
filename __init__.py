@@ -23,7 +23,8 @@ def run(app=None, port=None, endpoint=''):
     process, out, error = subprocess_wrapper('{python} {script} {port} {endpoint}'.format(python=python_path, script=script_path, port=str(port), endpoint=endpoint))
 
     # after app close, kill local server
+    # TODO this is not actually closing the local server
     local_server.terminate()
     
-    # app was exited and will return
+    # app was exited and will return results from sub process
     return process, out, error
